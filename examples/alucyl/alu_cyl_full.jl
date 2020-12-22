@@ -24,7 +24,7 @@ function runme(meshfile, neigvs)
 	timing["Problem setup"] = @elapsed begin
 		fens, fes, integrationrulestiff, integrationrulemass = alu_cyl_load_mesh(meshfile)
 		u, K, M = alu_cyl_setup(E, nu, rho, omegashift, fens, fes, integrationrulestiff, integrationrulemass)
-		# @show issymmetric(K) && issymmetric(M)
+		# @show issymmetric(K) && issymmetric(M) 
 	end
 
 	timing["EV problem"] = @elapsed begin

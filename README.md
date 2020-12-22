@@ -33,11 +33,22 @@ The Julia environment needs to be initialized. This first part is best done by r
 ```
 using Pkg; Pkg.activate("."); Pkg.instantiate()
 ```
-When prompted, provide the username and the password.
-
-```
-import Pkg; Pkg.add("https://gitlab.com/PetrKrysl/CoNCMOR.jl.git")
-```
 
 ## Usage
 
+For instance for the aluminum cylinder example (folder `alucyl`) change the working folder to this directory
+```
+cd(".\\examples\\alucyl")  
+```
+Unzip the meshes
+```
+unzip meshes.zip 
+```
+Now run the file `alu_cyl_full.jl`
+```
+include("alu_cyl_full.jl")
+```
+and then the file `alu_cyl_red.jl`
+```
+include("alu_cyl_red.jl")
+```
